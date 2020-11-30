@@ -1,26 +1,23 @@
 <?php
 
-namespace Chat;
+namespace SimplyNotes;
 
 ini_set('session.gc_maxlifetime', 600);
 ini_set('session.cookie_lifetime', 0);
 session_set_cookie_params(0);
 session_start();
 
-require_once("sqlite/db.php");
-require_once("constants/consts.php");
-
+require_once("database/db_sqlite.php");
+//require_once("constants/consts.php");
 
 
 $path = $_REQUEST['path'];
 $list_of_path = array(
     "login",
     "register",
-    "send_message",
-    "get_users",
-    "get_messages",
-    "chat",
-    "logout"
+    "send_notes",
+    "logout",
+    "homepage",
 );
 $list_of_exception = array(
     "_data",

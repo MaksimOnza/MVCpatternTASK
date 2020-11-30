@@ -1,9 +1,9 @@
 <?php
-namespace Chat\db;
+namespace SimplyNotes\db_sqlite;
 
 function open_db()
 {
-    return new \SQLite3('db_sqlite/chat_sqlite_db.db');
+    return new \SQLite3('database/notes_db.db');
 }
 
 function query($query, $bind_values=[]){
@@ -33,13 +33,21 @@ function query_select($query, $bind_values = [])
     return $results;
 }
 
-function create_table()
+function create_user()
 {
-    execute('CREATE TABLE IF NOT EXISTS maks_name (
-            id_file integer PRIMARY KEY,
-            file_name text NOT NULL,
-            file_path text NOT NULL,
-            user_id integer NOT NUll,
-            own_file text NOT NULL
+    execute('CREATE TABLE IF NOT EXISTS user (
+            id INTEGER PRIMARY KEY,
+            name TEXT NOT NULL,
+            password TEXT NOT NULL,
+            time_stamp INTEGER NOT NUll
+            );');
+}
+function create_list_notes()
+{
+    execute('CREATE TABLE IF NOT EXISTS notes (
+            id integer PRIMARY KEY,
+            note TEXT NOT NULL,
+            id_user INTEGER NOT NULL,
+            time INTEGER NOT NUll
             );');
 }
