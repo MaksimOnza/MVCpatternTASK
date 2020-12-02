@@ -14,7 +14,7 @@
             <form method="post" action="/index.php?path=logout">
                 <a id="logout" href="index.php?path=login">LogOut</a>
             </form>
-        <?php }else{ ?>
+        <?php } else { ?>
             <a id="login" href="index.php?path=login">LogIn</a>
         <?php } ?>
     </div>
@@ -23,28 +23,29 @@
 <div id="SN_content">
     <div id="d_messages" class="_messages ">
         <?php
-            foreach ($notes as $note){
-                print '
+        foreach ($notes as $note) {
+            print '
                     <div id="display_message">
+                        <div id="id_note">' . $note['id'] . '</div>
                         <div id="text_message">
                             <div id="view_message">' . $note['note']
-                            .'</div>
+                . '</div>
                             <div id="view_date">
-                            '. date('Y-m-d', $note['time'] / 1000)
-                            . "\n" . date("H:i:s", $note['note'] / 1000) .'
+                            ' . date('Y-m-d', $note['time'] / 1000)
+                . "\n" . date("H:i:s", $note['time'] / 1000) . '
                             </div>
                         </div>
                         <div id="tools_message">
-                            <div id="editiong_note"></div>
-                            <div id="deleting_note"></div>
+                            <div id="editing_note" class="btn"></div>
+                            <div id="deleting_note" class="btn"></div>
                         </div>
                     </div>
                 ';
-            }
+        }
         ?>
     </div>
 </div>
-<?php  {
+<?php {
     print '
     <div id="_send">
         <div id="s_input" class="form-control form-control-file" contenteditable="true"></div>
@@ -80,6 +81,6 @@
                 . '</a></td><td>' . $name_users[$row['own_user']]
                 . '</td></tr>';
         }
-        */?>
+        */ ?>
     </table>
 </div>-->

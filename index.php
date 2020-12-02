@@ -18,6 +18,8 @@ $list_of_path = array(
     "send_notes",
     "logout",
     "homepage",
+    "edit_note",
+    "delete_note"
 );
 $list_of_exception = array(
     "_data",

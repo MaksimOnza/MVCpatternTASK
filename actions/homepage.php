@@ -20,11 +20,9 @@ foreach ($result as $user) {
 $user = query_select("SELECT name FROM user WHERE id = ?", [1 => $login]);
 
 $notes = query_select("SELECT * FROM notes WHERE id_user = ?", [1 => $user_id]);
-$array_note =[];
 foreach ($notes as $note) {
     $array_name[] = $note;
 }
-
-//$notes_content = return render('notes', ['notes' => $notes]);
+$notes = array_reverse($notes);
 
 return render('homepage', ['notes' => $notes]);

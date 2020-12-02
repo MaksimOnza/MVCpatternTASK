@@ -41,11 +41,13 @@
     border: 1px solid #6dd7ff;
 }
 #display_message{
-    margin: 5px;
-}
-#text_message{
+    margin: 5px;/*
+    height: 100px;*/
     border-radius: 5px;
     border: 2px solid antiquewhite;
+}
+#text_message{
+    display: inline;
 }
 #view_message{
     font-size: 20px;
@@ -62,13 +64,15 @@
     position: relative;
     height: 50px;
     margin-top: 30px;
-    /*border: 3px solid #6dd7ff;*/
+}
+#tools_message .btn{
+    background-color: ivory;
+    border: 1px solid #6dd7ff;
 }
 #s_input{
     width: 70%;
     float: left;
-    border: 1px solid #6dd7ff;/*
-    overflow-block: hidden;*/
+    border: 1px solid #6dd7ff;
     overflow-y: scroll;
     white-space: nowrap;
 }
@@ -78,7 +82,44 @@
     border: 1px solid #6dd7ff;
 }
 #smiles{
-    margin: 5px;
-    margin-bottom: -5px;
+    margin: 5px;-
+    margin-bottom: 5px;
     display: inline-block;
+}
+#tools_message{
+    margin: 3px 3px 3px 3px;
+}
+#editing_note{
+    background: url("/img/editing_pencil.png") no-repeat;
+    background-size: contain;
+    margin: inherit;
+    height: 24px;
+    width: 24px;
+}
+#editing_note:hover{
+    background: url("/img/editing_pencil.png") no-repeat;
+    background-size: contain;
+    height: 30px;
+    width: 30px;
+    margin: 0 2px 0 0;
+}
+#deleting_note{
+    background: url("/img/deleter_basket.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: inherit;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+}
+#deleting_note:hover{
+    background: url("/img/deleter_basket.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 30px;
+    width: 30px;
+    margin: 0;
+}
+#id_note{
+    display: none;
 }
