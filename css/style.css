@@ -40,13 +40,13 @@
     border-radius: 10px;
     border: 1px solid #6dd7ff;
 }
-#display_message{
+.display_message{
     margin: 5px;/*
     height: 100px;*/
     border-radius: 5px;
     border: 2px solid antiquewhite;
 }
-#text_message{
+.text_message{
     display: inline;
 }
 #view_message{
@@ -55,7 +55,7 @@
     background-color: #d0fff1;
     display: inline-block;
 }
-#view_date{
+.view_date{
     margin-left: 5px;
     display: inline-block;
     font-size: 10px;
@@ -65,7 +65,7 @@
     height: 50px;
     margin-top: 30px;
 }
-#tools_message .btn{
+.tools_message .btn{
     background-color: ivory;
     border: 1px solid #6dd7ff;
 }
@@ -86,24 +86,24 @@
     margin-bottom: 5px;
     display: inline-block;
 }
-#tools_message{
+.tools_message{
     margin: 3px 3px 3px 3px;
 }
-#editing_note{
+.editing_note{
     background: url("/img/editing_pencil.png") no-repeat;
     background-size: contain;
     margin: inherit;
     height: 24px;
     width: 24px;
 }
-#editing_note:hover{
+.editing_note:hover{
     background: url("/img/editing_pencil.png") no-repeat;
     background-size: contain;
     height: 30px;
     width: 30px;
     margin: 0 2px 0 0;
 }
-#deleting_note{
+.deleting_note{
     background: url("/img/deleter_basket.png") no-repeat;
     background-size: contain;
     background-position: center;
@@ -112,7 +112,7 @@
     height: 24px;
     width: 24px;
 }
-#deleting_note:hover{
+.deleting_note:hover{
     background: url("/img/deleter_basket.png") no-repeat;
     background-size: contain;
     background-position: center;

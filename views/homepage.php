@@ -25,19 +25,19 @@
         <?php
         foreach ($notes as $note) {
             print '
-                    <div id="display_message">
+                    <div class="display_message">
                         <div id="id_note">' . $note['id'] . '</div>
-                        <div id="text_message">
-                            <div id="view_message">' . $note['note']
+                        <div class="text_message"><div id="hidden"></div>
+                            <div class="view_message">' . $note['note']
                 . '</div>
-                            <div id="view_date">
+                            <div class="view_date">
                             ' . date('Y-m-d', $note['time'] / 1000)
                 . "\n" . date("H:i:s", $note['time'] / 1000) . '
                             </div>
                         </div>
-                        <div id="tools_message">
-                            <div id="editing_note" class="btn"></div>
-                            <div id="deleting_note" class="btn"></div>
+                        <div class="tools_message">
+                            <div class="editing_note btn"></div>
+                            <div class="deleting_note btn"></div>
                         </div>
                     </div>
                 ';

@@ -18,27 +18,44 @@
                 return false;
             }
         });
-        $("#deleting_note").click(
+        $(".deleting_note").click(
             function () {
                 alert('alert');
                 deleteAjaxForm('deleting_note', 'index.php?path=delete_note');
                 return false;
             }
         );
-        $("#editing_note").click(
+        $(".editing_note").click(
             function () {
-                showPrompt("Введите что-нибудь<br>...умное :)", function(value) {
-                    alert(document.getElementById(input_elem).innerText);
-                    //editAjaxForm('editing_note', 'index.php?path=edit_note');
-                });
+                var element = document.getElementById('id_note').innerText;
+                var hidden = document.getElementById('hidden').innerText;
+                alert(element);
+                let textArea = document.createElement('textarea');
+                textArea.style.width = '200px';
+                textArea.style.height = '200px';
+                textArea.className = 'edit-area';
 
+                textArea.value = element.innerHTML;
+              /*  td.innerHTML = '';*/
+                hidden.appendChild(textArea);
+                textArea.focus();
+                //deleteAjaxForm('deleting_note', 'index.php?path=delete_note');
                 return false;
             }
         );
+        /*$("#editing_note").click(
+            function () {
+                //var element = document.getElementById("#view_message").innerText;
+                alert(element);
+                //element.setAttribute('name', "true")
+                //showPrompt("Введите что-нибудь<br>...умное :)", function(value) {
+                    //alert(document.getElementById(input_elem).innerText);
+                    //editAjaxForm('editing_note', 'index.php?path=edit_note');
+                //});
+                return false;
+            }
+        );*/
     });
-    function showPrompt(html, callback){
-        callback(html);
-    }
 
     function deleteAjaxForm(input_elem, url_action) {
         var note = document.getElementById(input_elem).innerText;
