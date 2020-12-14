@@ -12,5 +12,6 @@ if($note){
         [
             1 => $note, $id, $time_stamp
         ]);
-//return render('notes');
+return render('notes');
+    //header('Location: index.php?path=homepage');
 }

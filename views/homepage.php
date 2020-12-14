@@ -26,18 +26,12 @@
         foreach ($notes as $note) {
             print '
                     <div class="display_message">
-                        <div id="id_note">' . $note['id'] . '</div>
-                        <div class="text_message"><div id="hidden"></div>
-                            <div class="view_message">' . $note['note']
-                . '</div>
-                            <div class="view_date">
-                            ' . date('Y-m-d', $note['time'] / 1000)
-                . "\n" . date("H:i:s", $note['time'] / 1000) . '
-                            </div>
+                        <div class="text_message">
+                            <div class="view_message">' . $note['note'] . '</div>
                         </div>
                         <div class="tools_message">
-                            <div class="editing_note btn"></div>
-                            <div class="deleting_note btn"></div>
+                            <div class="editing_note btn"><a class="editing_not" href="index.php?path=edit_note&id='.$note['id'].'">edit</a></div>
+                            <a class="deleting_note btn" href="index.php?path=delete_note&id='.$note['id'].'"></a>
                         </div>
                     </div>
                 ';
