@@ -13,20 +13,22 @@ require_once("database/db_sqlite.php");
 
 $path = $_REQUEST['path'];
 $list_of_path = array(
+    "/",
     "login",
     "register",
     "send_notes",
     "logout",
     "homepage",
     "edit_note",
-    "delete_note"
+    "delete_note",
+    "save_note"
 );
-$list_of_exception = array(
+/*$list_of_exception = array(
     "_data",
     "get_messages",
     "get_users",
     "send_message"
-);
+);*/
 
 function run_action($path, $list_of_path): string
 {

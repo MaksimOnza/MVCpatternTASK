@@ -5,6 +5,7 @@ namespace SimplyNotes;
 use function SimplyNotes\db_sqlite\query;
 
 $id = $_SESSION['user_id'];
+
 $time_stamp = $_POST['time_stamp'];
 $note = $_POST['note'];
 if($note){

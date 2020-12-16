@@ -35,11 +35,11 @@
 //     textArea.remove();
 //     parent_element.appendChild(source_element);
 // }
-$(".editing_note").bind(
+/*$(".editing_note").bind(
     function(){
         let source_element = document.querySelectorAll('.view_message');
-
-        alert(source_element[4].innerHTML);
+        alert('sdf');
+        alert("source_element.innerHTML");
     }
-);
+);*/
 

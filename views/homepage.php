@@ -7,7 +7,7 @@
  */
 /*print_r($notes);*/
 ?>
-
+<a href="#" class="editing_note"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a>
 <div id="SN_header">
     <div id="SN_login">
         <?php if ($_SESSION['user_name']) { ?>
@@ -25,15 +25,9 @@
         <?php
         foreach ($notes as $note) {
             print '
-                    <div class="display_message">
-                        <div class="text_message">
-                            <div class="view_message">' . $note['note'] . '</div>
-                        </div>
-                        <div class="tools_message">
-                            <div class="editing_note btn"><a class="editing_not" href="index.php?path=edit_note&id='.$note['id'].'">edit</a></div>
-                            <a class="deleting_note btn" href="index.php?path=delete_note&id='.$note['id'].'"></a>
-                        </div>
-                    </div>
+                    <div class="row">
+                        <ol class="todo-list" id="'.$note['id'].'">'. $note['note'] . '</ol>
+                    </div>                  
                 ';
         }
         ?>

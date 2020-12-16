@@ -82,29 +82,16 @@
     border: 1px solid #6dd7ff;
 }
 #smiles{
-    margin: 5px;-
+    margin: -5px;
     margin-bottom: 5px;
     display: inline-block;
 }
 .tools_message{
     margin: 3px 3px 3px 3px;
 }
-.editing_note{
-    background: url("/img/editing_pencil.png") no-repeat;
-    background-size: contain;
-    margin: inherit;
-    height: 24px;
-    width: 24px;
-}
-.editing_note:hover{
-    background: url("/img/editing_pencil.png") no-repeat;
-    background-size: contain;
-    height: 30px;
-    width: 30px;
-    margin: 0 2px 0 0;
-}
+
 .deleting_note{
-    background: url("/img/deleter_basket.png") no-repeat;
+    /*background: url("/img/deleter_basket.png") no-repeat;*/
     background-size: contain;
     background-position: center;
     margin: inherit;
@@ -113,13 +100,26 @@
     width: 24px;
 }
 .deleting_note:hover{
-    background: url("/img/deleter_basket.png") no-repeat;
+    /*background: url("/img/deleter_basket.png") no-repeat;*/
     background-size: contain;
     background-position: center;
     height: 30px;
     width: 30px;
     margin: 0;
 }
-#id_note{
-    display: none;
+.editing_note{
+    /*background: url("/img/editing_pencil.png") no-repeat;*/
+    background-size: contain;
+    background-position: center;
+    margin: inherit;
+    height: 24px;
+    width: 24px;
+}
+.editing_note:hover{
+    /*background: url("/img/editing_pencil.png") no-repeat;*/
+    background-size: contain;
+    background-position: center;
+    height: 30px;
+    width: 30px;
+    margin: 0 2px 0 0;
 }
