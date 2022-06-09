@@ -8,8 +8,8 @@ $id_user = $_SESSION['id_user'];
 $time_stamp = $_POST['time_stamp'];
 $action = $_POST['action'];
 
-
 $note = new \SimplyNotes\Models\ModelNote($id, $note, $id_user, $time_stamp);
+
 switch ($action) {
     case 'del':
         $note->deleteNote();
