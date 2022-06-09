@@ -46,10 +46,13 @@ class ModelNote
     {
         $notes = query_select("SELECT * FROM notes WHERE id = ?",
             [1 => $this->id_user]);
+        
         foreach ($notes as $note) {
             $array_name[] = $note;
         }
+        
         $notes = array_reverse($notes);
+        
         return $notes;
     }
 
@@ -57,10 +60,13 @@ class ModelNote
     {
         $notes = query_select("SELECT * FROM notes WHERE id_user = ?",
             [1 => $this->id_user]);
+        
         foreach ($notes as $note) {
             $array_name[] = $note;
         }
+        
         $notes = array_reverse($notes);
+        
         return $notes;
     }
 }
