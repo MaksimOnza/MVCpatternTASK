@@ -11,6 +11,7 @@ $notes = query_select("SELECT * FROM notes WHERE id_user = ?", [1 => $user_id]);
 foreach ($notes as $note) {
     $array_name[] = $note;
 }
+
 $notes = array_reverse($notes);
 
 return render('homepage', ['notes' => $notes]);
